@@ -36,34 +36,29 @@
 
 
 // {/* following example from class  */}
-// // // import React from 'react'
-// // import ReactDOM from 'react-dom'
-// // import { useState } from 'react'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { useState } from 'react', 'Book',
 
 
 const App = () => {
     const [authors] = useState(['Kyle Simpson','Addy Osmani','Caleb Doxsy','Chris Pine'])
     return (
         <>
-            <h1> You Don't Know JS: Up and Going</h1>
             {authors.map((author,index) => (
                 <Author authorName={author} key={index} />
             ))}
-            <div>If you're just getting into programming and/or JavaScript, this book will breifly explore what you need to get up and going</div>
-            <button>More information</button>
+            {/* Add a "disclousure drop down tab for the button */}
+            <button aria-expanded="false" aria-controls="desc">More information</button>
         </>
     )
 }
 
-const Author = (props) => {
-    console.log(props)
-    return (
-        <div className='author'>
-            <p>{props.authorName}</p>
-            <p>More Information</p>
-        </div>
-
-    )
+function Book () = {
+    title:
+    author:
+    shortDescription:
+    image:
 
 }
 
