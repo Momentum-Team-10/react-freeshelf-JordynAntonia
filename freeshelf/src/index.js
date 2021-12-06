@@ -38,7 +38,9 @@
 // {/* following example from class  */}
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { useState } from 'react', 'Book',
+import { useState } from 'react'
+import './App.css'
+import discButton from './discButton'
 
 
 const App = () => {
@@ -48,18 +50,35 @@ const App = () => {
             {authors.map((author,index) => (
                 <Author authorName={author} key={index} />
             ))}
+
             {/* Add a "disclousure drop down tab for the button */}
-            <button aria-expanded="false" aria-controls="desc">More information</button>
+            {/* <button aria-expanded="false" aria-controls="desc">More information</button> */}
         </>
     )
 }
 
-function Book () = {
-    title:
-    author:
-    shortDescription:
-    image:
-
+// function Book () {
+function Book () {
+        return (
+        <>
+            <div className= 'react-root'>
+                <div className= 'title'>
+                <div className= 'author'>
+                <div className= 'shortDescription'>
+                <div className= 'coverImageUrl'>
+                <div className= 'publisher'>
+                <div className='publicationDate'>
+                <div className='detailDescription'>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </>
+        );
+    )}
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'))
